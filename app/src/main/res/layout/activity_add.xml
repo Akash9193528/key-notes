@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddActivity">
+
+    <LinearLayout
+        android:id="@+id/cardview"
+        android:layout_width="match_parent"
+        android:layout_height="75sp"
+        android:backgroundTint="@color/white"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/backbtn"
+            android:layout_width="52dp"
+            android:layout_height="54dp"
+            android:layout_marginStart="10sp"
+            android:layout_marginTop="9dp"
+            android:src="@drawable/back" />
+
+        <ImageView
+            android:id="@+id/savebtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginStart="230sp"
+            android:src="@drawable/img" />
+
+
+    </LinearLayout>
+    <EditText
+        android:id="@+id/title_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/cardview"
+        android:hint="@string/Title"
+        android:textSize="30sp"
+        android:backgroundTint="@color/white"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginStart="10sp"/>
+
+    <EditText
+        android:id="@+id/description_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="136dp"
+        android:gravity="top"
+        android:backgroundTint="@color/white"
+        android:textStyle="normal"
+        android:textColor="@color/black"
+        android:hint="@string/start_typing"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_text" >
+
+
+    </EditText>
+
+    <TextView
+        android:id="@+id/dateView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/current_date"
+        tools:layout_editor_absoluteX="301dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="10sp"
+        android:layout_marginBottom="30sp"
+        app:layout_constraintBottom_toTopOf="@id/description_text"
+        tools:layout_editor_absoluteY="164dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
